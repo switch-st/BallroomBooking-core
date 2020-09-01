@@ -7,7 +7,7 @@ import (
 
 var (
 	// loggerProjectPath set by build flags, like:
-	// go build -ldflags "-X github.com/switch-st/BallroomBooking-core/util/logger.loggerProjectPath=`pwd`"
+	// go build -ldflags "-X $(MODULE_NAME)/util/logger.loggerProjectPath=`pwd`"
 	loggerProjectPath string = ""
 	loggerValidPath   bool   = false
 )

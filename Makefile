@@ -5,7 +5,9 @@ GOTEST=$(GOCMD) test
 GOGET=$(GOCMD) get
 
 TARGET=BallroomBooking-core
-BUILD_FLAG=-ldflags "-X github.com/switch-st/BallroomBooking-core/util/logger.loggerProjectPath=`pwd`"
+MODULE_NAME=github.com/switch-st/BallroomBooking-core
+VERSION=$(shell git describe --tags --always --dirty=-dev --match 'v*')
+BUILD_FLAG=-ldflags "-X $(MODULE_NAME)/util/logger.loggerProjectPath=`pwd`" -ldflags "-X $(MODULE_NAME)/util/version.versionName=$(VERSION)"
 REMOTE_DEST=vps:~/
 
 all: build
