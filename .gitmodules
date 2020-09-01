@@ -1,0 +1,3 @@
+[submodule "doc/requirement_doc"]
+	path = doc/requirement_doc
+	url = https://github.com/switch-st/BallroomBooking-doc.git
